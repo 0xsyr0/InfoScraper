@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Page for Secret Enumeration</title>
+    <script>
+      // JavaScript Code with Embedded Secrets
+      var password = "SuperSecret123!";
+      var apiKey = "api_key=12345-abcde-67890-fghij";
+      var jwtToken =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
+      var awsAccessKey = "AKIAIOSFODNN7EXAMPLE";
+      var email = "admin@example.com";
+      var internalIP = "192.168.1.100";
+
+      console.log("This is a test script containing sensitive information.");
+    </script>
+  </head>
+  <body>
+    <h1>Welcome to the Secret Test Page</h1>
+    <p>
+      This page contains various secrets that should be detected by the
+      enumeration script.
+    </p>
+
+    <!-- Hidden Credentials in HTML -->
+    <p>API Key: <span style="display: none">12345-abcde-67890-fghij</span></p>
+    <p>Email: <span style="display: none">admin@example.com</span></p>
+    <p>AWS Key: <span style="display: none">AKIAIOSFODNN7EXAMPLE</span></p>
+    <p>
+      JWT Token:
+      <span style="display: none"
+        >eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</span
+      >
+    </p>
+
+    <!-- Fake Login Form -->
+    <form action="#" method="POST">
+      <input type="hidden" name="password" value="P@ssw0rd123" />
+      <input type="hidden" name="token" value="my-secret-token" />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
